@@ -20,7 +20,7 @@ public:
     int Read(unsigned char *Data, int Length);
     int Bind();
     int Accept();
-    void SetPort(std::string Port);
+    void SetThePort(std::string Port);
     void SetServerCert(std::string ServerCertFile);
     void SetServerPrivateKey(std::string ServerPrivateKeyFile);
     void SetPrivateKeyPwd(std::string PrivateKeyPwd);

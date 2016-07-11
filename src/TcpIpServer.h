@@ -13,7 +13,7 @@ public:
     void Close();
     int Write(std::vector<unsigned char> Data);
     int Read(unsigned char *Buffer, int Length);
-    void SetPort(std::string Port);
+    void SetThePort(std::string Port);
     void SetReadTimeout(int Timeout);
     int Bind();
     int Accept();

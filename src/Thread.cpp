@@ -7,7 +7,6 @@
 #include "TcpIpServer.h"
 #include "SslServer.h"
 
-
 //This function will be executed in thread
 static void THREAD_CC ThreadProcess(void *Arg)
 {
@@ -20,7 +19,7 @@ static void THREAD_CC ThreadProcess(void *Arg)
 #endif
     
     TcpIpServer NosslServer;
-    NosslServer.SetPort("9999");
+    NosslServer.SetThePort("9999");
     NosslServer.SetReadTimeout(10);
     if(NosslServer.Bind() == OK)
     {
@@ -43,11 +42,11 @@ static void THREAD_CC ThreadProcess(void *Arg)
     
     
     SslServer MySslServer;
-    MySslServer.SetPort("9999");
+    MySslServer.SetThePort("9999");
     MySslServer.SetReadTimeout(20);
     MySslServer.SetWriteTimeout(20);
-    MySslServer.SetServerCert("/Volumes/WORK/projects/Demos/Openssl/dep/certs/server.pem");
-    MySslServer.SetServerPrivateKey("/Volumes/WORK/projects/Demos/Openssl/dep/certs/server.pem");
+    MySslServer.SetServerCert(__CertPath + "server.pem");
+    MySslServer.SetServerPrivateKey(__CertPath + "server.pem");
     MySslServer.SetPrivateKeyPwd("password");
     if(MySslServer.Bind() == OK)
     {
@@ -75,7 +74,7 @@ static void THREAD_CC ThreadProcess(void *Arg)
 //This function will create new thread and pass him thread structure as argument
 int Thread::Create()
 {
-    void *Params;
+    void *Params = NULL;
     THREAD_TYPE Tid;
     
     LOG("Creating new thread", THREAD_LOG_BIT);

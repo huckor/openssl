@@ -368,7 +368,7 @@ void SslClient::SetHost(std::string Host)
     _Host = Host;
 }
 
-void SslClient::SetPort(std::string Port)
+void SslClient::SetThePort(std::string Port)
 {
     _Port = Port;
 }

@@ -4,6 +4,7 @@
 #include "Log.h"
 
 extern Log *__LOG;
+extern std::string __CertPath;
 
 #define MAIN_LOG_BIT            0x00000001
 #define LUA_LOG_BIT             0x00000002

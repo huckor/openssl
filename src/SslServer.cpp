@@ -365,7 +365,7 @@ void SslServer::Close()
     }
 }
 
-void SslServer::SetPort(std::string Port)
+void SslServer::SetThePort(std::string Port)
 {
     _Port = Port;
 }

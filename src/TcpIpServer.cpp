@@ -20,7 +20,7 @@ TcpIpServer::~TcpIpServer()
         Close();
 }
 
-void TcpIpServer::SetPort(std::string Port)
+void TcpIpServer::SetThePort(std::string Port)
 {
     _Port = Port;
 }

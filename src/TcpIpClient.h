@@ -14,7 +14,7 @@ public:
     void Close();
     int Write(std::vector<unsigned char> Data);
     int Read(unsigned char *Buffer, int Length);
-    void SetPort(std::string Port);
+    void SetThePort(std::string Port);
     void SetHost(std::string Host);
     void SetReadTimeout(int Timeout);
     void SetWriteTimeout(int Timeout);

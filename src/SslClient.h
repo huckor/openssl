@@ -20,7 +20,7 @@ public:
     int Write(std::vector<unsigned char> Data);
     int Read(unsigned char *Data, int Length);
     void SetHost(std::string Host);
-    void SetPort(std::string Port);
+    void SetThePort(std::string Port);
     void SetCaCert(std::string CaCertFile);
     void SetClientCert(std::string ClientCertFile);
     void SetClientPrivateKey(std::string PrivateKeyFile);

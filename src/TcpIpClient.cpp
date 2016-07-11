@@ -21,7 +21,7 @@ TcpIpClient::~TcpIpClient()
         Close();
 }
 
-void TcpIpClient::SetPort(std::string Port)
+void TcpIpClient::SetThePort(std::string Port)
 {
     _Port = Port;
 }

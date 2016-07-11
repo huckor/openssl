@@ -7,6 +7,12 @@
 
 Log *__LOG;
 
+#ifdef WIN
+std::string __CertPath = Path::GetPathToExecutableFolder() + "../../../dep/certs/";
+#elif __APPLE__
+std::string __CertPath = "/Volumes/WORK/projects/Demos/Openssl/dep/certs/";
+#endif
+
 int main(int argc, const char * argv[])
 {
     //Create log class !importand to do it before anything else
@@ -14,7 +20,12 @@ int main(int argc, const char * argv[])
     __LOG->Create("stderr");
     
     
-    std::vector<unsigned char> Data = { 'T', 'E', 'S', 'T'};
+    std::vector<unsigned char> Data;
+	Data.push_back('T');
+	Data.push_back('E');
+	Data.push_back('S');
+	Data.push_back('T');
+    
     SslClient SslClient;
     SslClient.Initialize();
     
@@ -23,7 +34,7 @@ int main(int argc, const char * argv[])
     
     TcpIpClient NosslClient;
     NosslClient.SetHost("localhost");
-    NosslClient.SetPort("9999");
+    NosslClient.SetThePort("9999");
     NosslClient.SetReadTimeout(20);
     NosslClient.SetWriteTimeout(20);
     if(NosslClient.Open() == OK)
@@ -35,12 +46,12 @@ int main(int argc, const char * argv[])
     SLEEP(10);
     
     SslClient.SetHost("localhost");
-    SslClient.SetPort("9999");
+    SslClient.SetThePort("9999");
     SslClient.SetReadTimeout(20);
     SslClient.SetWriteTimeout(20);
-    SslClient.SetCaCert("/Volumes/WORK/projects/Demos/Openssl/dep/certs/serverCA.pem");
-    SslClient.SetClientCert("/Volumes/WORK/projects/Demos/Openssl/dep/certs/client.pem");
-    SslClient.SetClientPrivateKey("/Volumes/WORK/projects/Demos/Openssl/dep/certs/client.pem");
+	SslClient.SetCaCert(__CertPath + "serverCA.pem");
+    SslClient.SetClientCert(__CertPath + "client.pem");
+    SslClient.SetClientPrivateKey(__CertPath + "client.pem");
     SslClient.SetClientCertPwd("password");
     if(SslClient.Open() == OK)
     {
