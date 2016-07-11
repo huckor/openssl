@@ -7,7 +7,7 @@
 
 Log *__LOG;
 
-#ifdef WIN
+#ifdef WIN32
 std::string __CertPath = Path::GetPathToExecutableFolder() + "../../../dep/certs/";
 #elif __APPLE__
 std::string __CertPath = "/Volumes/WORK/projects/Demos/Openssl/dep/certs/";
