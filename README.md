@@ -1,7 +1,10 @@
-Networking demo using Openssl library.
+**Networking demo using Openssl library.**
+
 
 Programming language: C++
+
 OS Usage: MacOS 64bit, Windows 32bit, Linux 64bit
+
 Projects: Xcode, Visual Studio 2010, Eclipse
 
 Notes
