@@ -97,7 +97,7 @@ int SslServer::Accept()
         return FAIL;
     }
     
-    Socket = BIO_get_fd(_Conn, NULL);
+    Socket = (int)BIO_get_fd(_Conn, NULL);
     TimeVal.tv_sec = _ReadTimeout;
     TimeVal.tv_usec = 0;
     FD_ZERO(&FdSet);

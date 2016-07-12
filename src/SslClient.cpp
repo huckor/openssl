@@ -79,7 +79,7 @@ int SslClient::Open()
     //Less or equal 0 means we need to wait on socket till openssl finish write operation
     if(BIO_do_connect(_Conn) <= 0)
     {
-        Socket = BIO_get_fd(_Conn, NULL);
+        Socket = (int)BIO_get_fd(_Conn, NULL);
         if(Socket == -1)
         {
             LOG("Unable to connect to the remote machine.", OPENSSL_LOG_BIT);
@@ -99,7 +99,7 @@ int SslClient::Open()
     
     //Retrieve socket from BIO
     if(Socket == -1)
-        Socket = BIO_get_fd(_Conn, NULL);
+        Socket = (int)BIO_get_fd(_Conn, NULL);
     
     //Pin connection to SSL
     SSL_set_bio(_Ssl, _Conn, _Conn);
@@ -138,7 +138,7 @@ int SslClient::Open()
     }
     
     //Check if ssl re-used saved ssl session
-    Ret = SSL_session_reused(_Ssl);
+    Ret = (int)SSL_session_reused(_Ssl);
     if(Ret == 0)
         LOG("SSL Connection created and opened, new session was negotiated.", OPENSSL_LOG_BIT);
     else

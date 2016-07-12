@@ -70,7 +70,7 @@ int TcpIpClient::Open()
     //Less or equal 0 means we need to wait on socket till openssl finish write operation
     if(BIO_do_connect(_Conn) <= 0)
     {
-        Socket = BIO_get_fd(_Conn, NULL);
+        Socket = (int)BIO_get_fd(_Conn, NULL);
         if(Socket == -1)
         {
             LOG("Unable to connect to the remote machine.", OPENSSL_LOG_BIT);
@@ -124,7 +124,7 @@ int TcpIpClient::Read(unsigned char *Buffer, int Length)
         return FAIL;
     }
     
-    Socket = BIO_get_fd(_Conn, NULL);
+    Socket = (int)BIO_get_fd(_Conn, NULL);
     TimeVal.tv_sec = _ReadTimeout;
     TimeVal.tv_usec = 0;
     FD_ZERO(&FdSet);

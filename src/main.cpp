@@ -11,6 +11,8 @@ Log *__LOG;
 std::string __CertPath = Path::GetPathToExecutableFolder() + "../../../dep/certs/";
 #elif __APPLE__
 std::string __CertPath = "/Volumes/WORK/projects/Demos/Openssl/dep/certs/";
+#else
+std::string __CertPath = "/home/robo/workspace/Openssl/dep/certs/";
 #endif
 
 int main(int argc, const char * argv[])

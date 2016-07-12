@@ -60,7 +60,7 @@ unsigned long Time::GetSecondsSinceEpoch()
   LargeInteger.HighPart = FileTime.dwHighDateTime;
 
   //Convert to seconds
-  return LargeInteger.QuadPart / 10000000;
+  return (unsigned long)LargeInteger.QuadPart / 10000000;
 #endif
 }
 
