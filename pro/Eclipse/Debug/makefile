@@ -43,7 +43,7 @@ all: Openssl
 Openssl: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L/home/robo/workspace/Openssl/dep/openssl/lib/linux64 -o "Openssl" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L../../../dep/openssl/lib/linux64 -Wl,--no-as-needed -o "Openssl" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

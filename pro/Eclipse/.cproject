@@ -24,16 +24,17 @@
 								<option id="gnu.cpp.compiler.exe.debug.option.optimization.level.1689853619" name="Optimization Level" superClass="gnu.cpp.compiler.exe.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.551577331" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1022097911" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/home/robo/workspace/Openssl/dep/openssl/include"/>
+									<listOptionValue builtIn="false" value="../../../dep/openssl/include"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.dialect.std.269455718" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.other.other.1165874068" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 -Wl,--no-as-needed" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1954716357" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.2034754940" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.557870781" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.debug.option.debugging.level.969682057" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.1870558646" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/home/robo/workspace/Openssl/dep/openssl/include"/>
+									<listOptionValue builtIn="false" value="../../../dep/openssl/include"/>
 								</option>
 								<option id="gnu.c.compiler.option.dialect.std.1979899720" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.136048294" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
@@ -47,9 +48,9 @@
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="pthread"/>
 								</option>
 								<option id="gnu.cpp.link.option.paths.1067622500" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="/home/robo/workspace/Openssl/dep/openssl/lib/linux64"/>
+									<listOptionValue builtIn="false" value="../../../dep/openssl/lib/linux64"/>
 								</option>
-								<option id="gnu.cpp.link.option.flags.1659386447" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="" valueType="string"/>
+								<option id="gnu.cpp.link.option.flags.1659386447" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="-Wl,--no-as-needed" valueType="string"/>
 								<option id="gnu.cpp.link.option.other.151995751" name="Other options (-Xlinker [option])" superClass="gnu.cpp.link.option.other"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.481485218" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
@@ -58,7 +59,7 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.exe.debug.230369821" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.debug">
 								<option id="gnu.both.asm.option.include.paths.757798142" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/home/robo/workspace/Openssl/dep/openssl/include"/>
+									<listOptionValue builtIn="false" value="../../../dep/openssl/include"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1269433181" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
